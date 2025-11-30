@@ -7,7 +7,7 @@ from django_countries.fields import CountryField
 
 class Manufacturer(models.Model):
     name = models.CharField(max_length=63, unique=True)
-    country = CountryField()
+    country = models.CharField(max_length=63)
 
     def __str__(self) -> str:
         return self.name
